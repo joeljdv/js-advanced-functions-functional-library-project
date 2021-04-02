@@ -8,8 +8,12 @@ const fi = (function() {
 
     },
 
-    map: function() {
-
+    map: function(arry,callback) {
+      const newArry = []
+      for(const el of arry) {
+        newArry.push(callback(el))
+      }
+      return newArry
     },
 
     reduce: function() {
